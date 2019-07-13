@@ -157,6 +157,8 @@ spotbugs {
 
 test {
     ignoreFailures = true
+    outputs.upToDateWhen { false }
+    testLogging.showStandardStreams = true
 }
 
 def convertGitBranch = { gitBranch ->
