@@ -151,8 +151,9 @@ public class TestBaseLauncherSettings {
         //null properties file
 
         baseLauncherSettings.load();
+        System.out.println("AFTER LOAD:\n" + baseLauncherSettings);
         baseLauncherSettings.init();
-        System.out.println(baseLauncherSettings);
+        System.out.println("AFTER INIT:\n" + baseLauncherSettings);
 
         assertEquals(baseLauncherSettings.getLocale(), Languages.DEFAULT_LOCALE);
         assertEquals(baseLauncherSettings.getJob(), BaseLauncherSettings.JOB_DEFAULT);
