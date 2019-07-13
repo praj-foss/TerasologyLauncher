@@ -101,6 +101,8 @@ public class TestBaseLauncherSettings {
 
     @Test
     public void testInitWithValues() throws Exception {
+        System.out.println();
+
         //initialise properties with sample values
         locale = "en";
         job = "TerasologyStable";
@@ -150,6 +152,7 @@ public class TestBaseLauncherSettings {
 
         baseLauncherSettings.load();
         baseLauncherSettings.init();
+        System.out.println(baseLauncherSettings);
 
         assertEquals(baseLauncherSettings.getLocale(), Languages.DEFAULT_LOCALE);
         assertEquals(baseLauncherSettings.getJob(), BaseLauncherSettings.JOB_DEFAULT);
